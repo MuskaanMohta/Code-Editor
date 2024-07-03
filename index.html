@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="container">
+        <h1>Code Editor 💻</h1>
+        <div class="editor">
+            <div class="left">
+                <label><i class='bx bxl-html5'></i>HTML</label>
+                <textarea onkeyup="run()" spellcheck="false" id="HTML-code"></textarea> 
+                <!--spellcheck=false if we do any spelling mistake in text area of html,css,js 
+                    then no red line or anything of that sort appears under the text in the code editor-->
+                <label><i class='bx bxl-css3' ></i>CSS</label>
+                <textarea onkeyup="run()" spellcheck="false" id="CSS-code"></textarea>
+                <!--if we write something in any of the 3 text areas the run func 
+                    will run bcz of onkeyup="run()" and the output will be displayed -->
+                <label><i class='bx bxl-javascript' ></i>JS</label>
+                <textarea onkeyup="run()" spellcheck="false"  id="JS-code"></textarea>
+            </div>
+            <div class="right">
+                <label><i class='bx bx-play' ></i>Output</label>
+                <iframe id="output"></iframe>
+            </div>
+        </div>
+        <footer>Made with 🧡 by Muskaan Mohta</footer>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
